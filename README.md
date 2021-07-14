@@ -29,7 +29,7 @@ npm install vue
   [Twitter](https://twitter.com/Alafresh1) |
   [Github](https://github.com/Alafresh)
 * Shelcy Calderón [LinkedIn](https://www.linkedin.com/in/shelcy-calderon-6a7177202/) | [shelcyjulianacalderon@gmail.com](shelcyjulianacalderon@gmail.com)
-* Martin Vasquez [Facebook](facebook.com/MartinVz2077/) | [martinvz2077@gmail.com](martinvz2077@gmail.com)
+* Martin Vasquez [Facebook](https://www.facebook.com/MartinVz2077/) | [martinvz2077@gmail.com](martinvz2077@gmail.com)
 * Cristian Vargar [cristianvrg95@gmail.com](cristianvrg95@gmail.com)
 
 
