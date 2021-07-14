@@ -3,7 +3,7 @@
 
 This project obtains information in real time about the value of different cryptocurrencies through a request to an API [coincap](https://coincap.io/)
 
-## Requirements
+## Requirements 🛠️
 
 __Nodejs__ __Npm__  you need to install the latest version of node and npm for your operating system [here](https://nodejs.org/es/download/)
 Once installed node in terminal check the version of node and npm
@@ -23,14 +23,14 @@ or use npm to install Vuejs in your terminal, oficial guide installation [here](
 npm install vue
 ```
 
-## Authors
+## Authors ✒️
 
 * Juan Guillermo Caicedo [LinkedIn](www.linkedin.com/in/JuanGCC) |
   [Twitter](https://twitter.com/Alafresh1) |
   [Github](https://github.com/Alafresh)
 * Shelcy Calderón [LinkedIn](https://www.linkedin.com/in/shelcy-calderon-6a7177202/) | [shelcyjulianacalderon@gmail.com](shelcyjulianacalderon@gmail.com)
-* Martin Vasquez
-* Cristian
+* Martin Vasquez [Facebook](facebook.com/MartinVz2077/) | [martinvz2077@gmail.com](martinvz2077@gmail.com)
+* Cristian Vargar [cristianvrg95@gmail.com](cristianvrg95@gmail.com)
 
 
 ## License
