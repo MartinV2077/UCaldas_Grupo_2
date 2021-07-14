@@ -29,6 +29,8 @@ npm install vue
   [Twitter](https://twitter.com/Alafresh1) |
   [Github](https://github.com/Alafresh)
 * Shelcy Calderón [LinkedIn](https://www.linkedin.com/in/shelcy-calderon-6a7177202/) | [shelcyjulianacalderon@gmail.com](shelcyjulianacalderon@gmail.com)
+* Martin Vasquez
+* Cristian
 
 
 ## License
