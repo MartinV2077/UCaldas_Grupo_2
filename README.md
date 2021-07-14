@@ -25,7 +25,7 @@ npm install vue
 
 ## Authors ✒️
 
-* Juan Guillermo Caicedo [LinkedIn](www.linkedin.com/in/JuanGCC) |
+* Juan Guillermo Caicedo [LinkedIn](https://www.linkedin.com/in/juangcc/) |
   [Twitter](https://twitter.com/Alafresh1) |
   [Github](https://github.com/Alafresh)
 * Shelcy Calderón [LinkedIn](https://www.linkedin.com/in/shelcy-calderon-6a7177202/) | [shelcyjulianacalderon@gmail.com](shelcyjulianacalderon@gmail.com)
