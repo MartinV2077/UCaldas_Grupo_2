@@ -10,6 +10,8 @@ new Vue ({
       changePercent: -10,
 
       priceToday: 8400,
+      
+      color: 'f4f4f4',
 
       color: 'f4f4f4',
 
