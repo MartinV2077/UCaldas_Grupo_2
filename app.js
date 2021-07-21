@@ -10,9 +10,9 @@ new Vue ({
       changePercent: -10,
 
       priceToday: 8400,
-      
-      color: 'f4f4f4',
 
+      value: 0,
+      
       color: 'f4f4f4',
 
       pricesWithDays:[
@@ -32,6 +32,14 @@ new Vue ({
   computed:{
     title(){
       return `${this.name} - ${this.symbol}`
+    },
+
+    convertedValue(){
+      if (!this.value){
+        return 0
+      }
+
+      return this.value / this.priceToday
     }
   },
 
