@@ -1,3 +1,5 @@
+<!--//Creacion Atributos dinamicos Sprint_1-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,30 +7,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+<!--Referencia a archivo .css Sp1-->
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-    <div id="app" v-bind:style="{ background: '#' + color }">
-            
-        <coin-detail 
-          v-on:change-color="updateColor"
-          v-bind:coin="btc">
+    <div id="app">
+<!--Directiva v-bind para definir atributos dinamicos-->
+      <img v-bind:src="img" v-bind:alt="name">
+      <h1>{{ name }}</h1>
 
-          <template v-slot:text>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-              Consequuntur aperiam, repudiandae asperiores consequatur 
-              maxime quos doloribus deserunt dolore, aliquid error nobis 
-              cupiditate id ullam ipsam porro fugiat. Vitae, veniam nobis.
-            </p>
-          </template>
-          <template v-slot:link>
-            <a href="#">Link!</a>
-          </template>
-          
-        </coin-detail>
-         
     </div>
+  <!--Instalacion de VUE a traves del script Sp1-->
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+  <!--Referencia al archivo .js Sp1-->
     <script src="app.js"></script>
   </body>
   </html>
