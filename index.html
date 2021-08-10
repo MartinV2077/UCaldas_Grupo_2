@@ -12,22 +12,24 @@
 </head>
 <body>
     <div id="app">
-<!--Directiva v-bind para definir atributos dinamicos-->
-      <img v-bind:src="img" v-bind:alt="name">
+<!--Directivas v-bind, v-on:mouseover para cambios con el movimiendo del mouse - tarea control flujo con directivas, Sp2-->      
+      <img v-bind:src="img" v-bind:alt="name" 
+      v-on:mouseover="toggleShowPrices"
+      v-on:mouseOut="toggleShowPrices">
 <!--Directivas v-if, v-else dentro de h1 para condicionar cambios - tarea control flujo con directivas, Sp2-->
       <h1>{{ name }}
 
       <span v-if="changePercent > 0">👍</span>
       <span v-else-if="changePercent < 0">👎</span>
       <span v-else>🤞</span>
-
+      <br>
+<!--Directiva v-on, para en determinado evento ejecutar accion con click mostrar precios-  Tarea Manejo de Eventos, Sp2-->
+    <span v-on:click="toggleShowPrices"> {{ showPrices ? '🙈' : '🙉' }}  Ver Precios</span>
       </h1>
-<!--Directivas v-for para representar cada elemento del array - tarea renderizado listas, Sp2-->
-      <ul>
-        <li v-for="(price, indice) in prices" v-bind:key="price"> {{ indice }} = {{ price }}</li>
-      </ul>
-<!--Directivas v.bind:key para mantener array price, .day y .value acceden a valores- tarea renderizado listas, Sp2-->    
-      <ul>
+
+
+<!--Directiva v-show, muestra precios si True-  Tarea Manejo de Eventos, Sp2-->
+      <ul v-show=showPrices>
         <li v-for="(price, indice) in pricesWithDays" v-bind:key="price.day"> {{ indice }} = {{price.day}} = {{ price.value }}</li>
       </ul>
       
