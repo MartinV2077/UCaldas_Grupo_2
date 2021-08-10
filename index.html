@@ -14,7 +14,17 @@
     <div id="app">
 <!--Directiva v-bind para definir atributos dinamicos-->
       <img v-bind:src="img" v-bind:alt="name">
-      <h1>{{ name }}</h1>
+<!--Directivas v-if, v-else dentro de h1 para condicionar cambios - tarea control flujo con directivas, Sp2-->
+      <h1>{{ name }}
+
+      <span v-if="changePercent > 0">👍</span>
+      <span v-else-if="changePercent < 0">👎</span>
+      <span v-else>🤞</span>
+<!--Directivas v-show dentro de h1 para dinamizar cambios - tarea control flujo con directivas, Sp2-->
+      <span v-show="changePercent > 0">👍</span>
+      <span v-show="changePercent < 0">👎</span>
+      <span v-show="changePercent==0">🤞</span>
+      </h1>
 
     </div>
   <!--Instalacion de VUE a traves del script Sp1-->
