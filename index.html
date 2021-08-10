@@ -20,12 +20,17 @@
       <span v-if="changePercent > 0">👍</span>
       <span v-else-if="changePercent < 0">👎</span>
       <span v-else>🤞</span>
-<!--Directivas v-show dentro de h1 para dinamizar cambios - tarea control flujo con directivas, Sp2-->
-      <span v-show="changePercent > 0">👍</span>
-      <span v-show="changePercent < 0">👎</span>
-      <span v-show="changePercent==0">🤞</span>
-      </h1>
 
+      </h1>
+<!--Directivas v-for para representar cada elemento del array - tarea renderizado listas, Sp2-->
+      <ul>
+        <li v-for="(price, indice) in prices" v-bind:key="price"> {{ indice }} = {{ price }}</li>
+      </ul>
+<!--Directivas v.bind:key para mantener array price, .day y .value acceden a valores- tarea renderizado listas, Sp2-->    
+      <ul>
+        <li v-for="(price, indice) in pricesWithDays" v-bind:key="price.day"> {{ indice }} = {{price.day}} = {{ price.value }}</li>
+      </ul>
+      
     </div>
   <!--Instalacion de VUE a traves del script Sp1-->
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
