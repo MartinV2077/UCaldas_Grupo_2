@@ -14,34 +14,15 @@
 
 <!--Aplicacion directiva v-bind con atributo style para cambio color de fondo - tarea Ajuste de Estilos en tiempo real, Sp2-->
   <div id="app"  v-bind:style="{ background: '#' + color }">
-<!--Directivas v-bind, v-on:mouseover para cambios con el movimiendo del mouse - tarea control flujo con directivas, Sp2-->      
-      <img v-bind:src="img" v-bind:alt="name" 
-      v-on:mouseover="toggleShowPrices"
-      v-on:mouseOut="toggleShowPrices">
-<!--v-bind:class para que con una condicion cambie el color en css - tarea control flujo con directivas, Sp2-->
-    <h1 v-bind:class="changePercent > 0 ? 'green' : 'red' ">{{title}}
 
-      <span v-if="changePercent > 0">👍</span>
-      <span v-else-if="changePercent < 0">👎</span>
-      <span v-else>🤞</span>
-      
+<!--Argumento de componente Coin-detail para valores dinamicos, Tarea Modularizacion para la comunicacion entre componentes en las propiedades.- Sprint 3
+-->
+    <coin-detail 
+          v-on:change-color="updateColor"
+          v-bind:coin="btc">
+        </coin-detail>
 
-    <span v-on:click="toggleShowPrices"> {{ showPrices ? '🙈' : '🙉' }} </span>
-      </h1>
-<!-- Se aplica directiva v-model para entrada de numero y valor convertido de Bitcoin Tarea Modelado Two way data bindign - Sp2 -->
-      <input type="number" v-model="value">
-      <span>{{ convertedValue }}</span>
-<!--Determinar color de precios-Clase por defecto,  Tarea Creacion de Clases en tiempo real, Sp2-->
-      <ul v-show=showPrices>
-        <li 
 
-          class="uppercase"
-          v-bind:class="{ orange: price.value  == priceToday, red: price.value < priceToday, green: price.value > priceToday }"
-          v-for="(price, indice) in pricesWithDays"
-          v-bind:key="price.day"> 
-          {{ indice }} = {{price.day}} = {{ price.value }}
-        </li>
-      </ul>
       
     </div>
   <!--Instalacion de VUE a traves del script Sp1-->
