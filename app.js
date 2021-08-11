@@ -19,6 +19,7 @@ Vue.component('CoinDetail', {
     toggleShowPrices () {
       this.showPrices = !this.showPrices
 
+//funcion $emit para emitir evento de cambio de color , Tarea Modularizacion para la comunicacion entre componentes en los eventos.- Sprint 3
 
       this.$emit('change-color',
         this.showPrices ? 'FF96C8' : '3D3D3D')
@@ -119,7 +120,7 @@ new Vue({
 
 
 //propiedad methods para controlar eventos en vista, cambia a valores contrarios, tarea Manejo de eventos,  Sp2
-  //Objeto methods, Tarea Modularizacion para la comunicacion entre componentes en las propiedades.- Sprint 3
+  //Objeto methods para evento cambio de color, Tarea Modularizacion para la comunicacion entre componentes en los eventos.- Sprint 3
 
     
     methods: {
