@@ -28,8 +28,9 @@
 
     <span v-on:click="toggleShowPrices"> {{ showPrices ? '🙈' : '🙉' }} </span>
       </h1>
-
-
+<!-- Se aplica directiva v-model para entrada de numero y valor convertido de Bitcoin Tarea Modelado Two way data bindign - Sp2 -->
+      <input type="number" v-model="value">
+      <span>{{ convertedValue }}</span>
 <!--Determinar color de precios-Clase por defecto,  Tarea Creacion de Clases en tiempo real, Sp2-->
       <ul v-show=showPrices>
         <li 

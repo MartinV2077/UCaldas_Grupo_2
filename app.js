@@ -17,8 +17,9 @@ new Vue({
         changePercent: -10,
 //Variable que define el precio del Bitcoin, Tarea Creacion de Clases en tiempo real - Sp2
         priceToday: 8400,
+//Propiedad Value en 0,  Tarea Modelado Two way data binding - Sp2
+        value: 0,
 
-//Variable color, Tarea ajuste de estilos en tiempo real - Sp2
         color: 'f4f4f4',
 
 //Array de objetos con propiedades day y value, tarea renderizado listas, precio Bitcoin,  Sp2
@@ -41,6 +42,16 @@ new Vue({
   computed:{
     title(){
       return `${this.name} - ${this.symbol}`
+    
+
+  },
+//Propiedad computada que reacciona segun value, Tarea Modelado Two way data binding - Sp2
+  convertedValue(){
+    if (!this.value){
+      return 0
+    }
+
+    return this.value / this.priceToday
     }
   },
 //funcion watch para cambios en los valores, tarea Creacion computed y watchers,  Sp2
