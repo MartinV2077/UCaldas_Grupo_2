@@ -12,16 +12,18 @@ new Vue({
         img: 'https://cryptologos.cc/logos/bitcoin-btc-logo.png',
 //Propiedad nueva, tarea control flujo con directivas, Sp2
         changePercent: -10,
+//Variable que define el precio del Bitcoin, Tarea Creacion de Clases en tiempo real - Sp2
+        priceToday: 8400,
 
 //Array de objetos con propiedades day y value, tarea renderizado listas, precio Bitcoin,  Sp2
       pricesWithDays:[
-        { day: 'Lunes', value: "8400" },
-        { day: 'Martes', value: "7900" },
-        { day: 'Miercoles', value: "8200" },
-        { day: 'Jueves', value: "9000" },
-        { day: 'Viernes', value: "9400" },
-        { day: 'Sabado', value: "10000" },
-        { day: 'Domingo', value: "10200" },
+        { day: 'Lunes', value: 8400 },
+        { day: 'Martes', value: 7900 },
+        { day: 'Miercoles', value: 8200 },
+        { day: 'Jueves', value: 9000 },
+        { day: 'Viernes', value: 9400 },
+        { day: 'Sabado', value: 10000 },
+        { day: 'Domingo', value: 10200 },
 
       ],
 

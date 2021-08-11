@@ -16,21 +16,28 @@
       <img v-bind:src="img" v-bind:alt="name" 
       v-on:mouseover="toggleShowPrices"
       v-on:mouseOut="toggleShowPrices">
-<!--Directivas v-if, v-else dentro de h1 para condicionar cambios - tarea control flujo con directivas, Sp2-->
-      <h1>{{ name }}
+<!--v-bind:class para que con una condicion cambie el color en css - tarea control flujo con directivas, Sp2-->
+    <h1 v-bind:class="changePercent > 0 ? 'green' : 'red' ">{{name}}
 
       <span v-if="changePercent > 0">👍</span>
       <span v-else-if="changePercent < 0">👎</span>
       <span v-else>🤞</span>
-      <br>
-<!--Directiva v-on, para en determinado evento ejecutar accion con click mostrar precios-  Tarea Manejo de Eventos, Sp2-->
-    <span v-on:click="toggleShowPrices"> {{ showPrices ? '🙈' : '🙉' }}  Ver Precios</span>
+      
+
+    <span v-on:click="toggleShowPrices"> {{ showPrices ? '🙈' : '🙉' }} </span>
       </h1>
 
 
-<!--Directiva v-show, muestra precios si True-  Tarea Manejo de Eventos, Sp2-->
+<!--Determinar color de precios-Clase por defecto,  Tarea Creacion de Clases en tiempo real, Sp2-->
       <ul v-show=showPrices>
-        <li v-for="(price, indice) in pricesWithDays" v-bind:key="price.day"> {{ indice }} = {{price.day}} = {{ price.value }}</li>
+        <li 
+
+          class="uppercase"
+          v-bind:class="{ orange: price.value  == priceToday, red: price.value < priceToday, green: price.value > priceToday }"
+          v-for="(price, indice) in pricesWithDays"
+          v-bind:key="price.day"> 
+          {{ indice }} = {{price.day}} = {{ price.value }}
+        </li>
       </ul>
       
     </div>
