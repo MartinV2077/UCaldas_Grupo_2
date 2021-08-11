@@ -15,6 +15,9 @@ new Vue({
 //Variable que define el precio del Bitcoin, Tarea Creacion de Clases en tiempo real - Sp2
         priceToday: 8400,
 
+//Variable color, Tarea ajuste de estilos en tiempo real - Sp2
+        color: 'f4f4f4',
+
 //Array de objetos con propiedades day y value, tarea renderizado listas, precio Bitcoin,  Sp2
       pricesWithDays:[
         { day: 'Lunes', value: 8400 },
@@ -35,6 +38,9 @@ new Vue({
   methods: {
     toggleShowPrices(){
       this.showPrices = !this.showPrices
+//Array de color ajustado hacia un string para un cambio a tono contrario, Tarea ajuste de estilos en tiempo real - Sp2
+      this.color = this.color.split('')
+        .reverse().join('')
 
     }
   }
