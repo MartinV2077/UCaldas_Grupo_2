@@ -9,6 +9,9 @@ new Vue({
     return {
 //Propiedades Sp1
         name: 'Bitcoin',
+//propiedad symbol, tarea Creacion computed y watchers,  Sp2
+        symbol: 'BTC',
+
         img: 'https://cryptologos.cc/logos/bitcoin-btc-logo.png',
 //Propiedad nueva, tarea control flujo con directivas, Sp2
         changePercent: -10,
@@ -34,6 +37,19 @@ new Vue({
       showPrices: false,
     }
   },
+  //Objeto computed que devuelve valores con propiedad computada title, tarea Creacion computed y watchers,  Sp2
+  computed:{
+    title(){
+      return `${this.name} - ${this.symbol}`
+    }
+  },
+//funcion watch para cambios en los valores, tarea Creacion computed y watchers,  Sp2
+  watch:{
+    showPrices(newValue, oldValue){
+      console.log(newValue, oldValue)
+    }
+  },
+
 //propiedad methods para controlar eventos en vista, cambia a valores contrarios, tarea Manejo de eventos,  Sp2
   methods: {
     toggleShowPrices(){
