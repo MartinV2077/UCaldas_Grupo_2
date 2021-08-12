@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,42 +8,41 @@
   <title>Proyecto Grupo2 || Desarrollo Web Mintic</title>
   <link rel="stylesheet" href="./styles.css">
 </head>
+
 <body>
 
+
+  <div id="app" v-bind:style="{ background: '#' + color }">
+
+
+    <!-- kebab case es cuando comienzan ambas palabras en minuscula, recordar colocar v-bind o si no , no pasara datos dinamicos si no lo que esta dentro de las comillas  -->
+    <coin-detail v-on:change-color="updateColor" 
+    v-bind:coin="btc">
+
+    <!-- para sar los slot con nombre (name) debo de usar la etiqeta template, este permite reenderizar contenido -->
+
+    <template v-slote:text>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga tenetur, soluta nobis eos rerum rem iure ipsa odio laboriosam quo repellat illum ex, nisi, modi molestiae aliquid sequi deleniti atque?</p>
+    </template>
+
+    <template v-slot:link>
+      <a href="#">Link</a>
+    </template>
   
-<div id="app"  v-bind:style="{ background: '#' + color }">
-  <img v-bind:src="img" v-bind:alt="name" 
-  v-on:mouseover="toggleShowPrices"
-  v-on:mouseOut="toggleShowPrices">
 
-  <h1 v-bind:class="changePercent > 0 ? 'green' : 'red' ">{{ title }}
-    <span v-if="changePercent > 0">👍</span>
-    <span v-else-if="changePercent < 0">👎</span>
-    <span v-else>🤞</span>
-
-    <span v-on:click="toggleShowPrices"> {{ showPrices ? '🙈' : '🙉' }} </span>
-
-  </h1>
-
-  <input type="number" v-model="value">
-  <span>{{ convertedValue }}</span>
-
-  
-
-  <ul v-show=showPrices>
-    <li 
-      class="uppercase"
-      v-bind:class="{ orange: price.value  == priceToday, red: price.value < priceToday, green: price.value > priceToday }"
-      v-for="(price, indice) in pricesWithDays"
-      v-bind:key="price.day"> 
-      {{ indice }} = {{price.day}} = {{ price.value }}
-    </li>
-  </ul>
-</div>
+  </coin-detail>
 
 
-  
+
+    
+
+
+  </div>
+
+
+
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
   <script src="app.js"></script>
 </body>
+
 </html>
