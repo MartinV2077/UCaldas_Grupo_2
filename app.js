@@ -42,7 +42,7 @@ convertedValue() {
 },
 
 //template en componente con codigo HTML, Tarea Modularizacion para la comunicacion entre componentes en las propiedades.- Sprint 3
-
+//Se añadieron slots que inyectan codigo HTML a componente, tarea creacion de slots - Sprint 3
 template: `
   <div>
     <img 
@@ -60,6 +60,8 @@ template: `
     </h1>
     <input type="number" v-model="value">
       <span>{{ convertedValue }}</span>
+      <slot name="text"></slot>
+      <slot name="link"></slot>
       <ul v-show=showPrices>
       <li
         class="uppercase"
