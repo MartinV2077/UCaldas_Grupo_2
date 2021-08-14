@@ -8,7 +8,6 @@
 <script>
 import PxHeader from "@/components/PxHeader"; //Componet - Sp5
 
-
 //Instancia o componente
 export default {
   name: "App",
